@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
-  name: { type: String, trim: true, required: true },
-  email: { type: String, trim: true, required: true },
-  password: { type: String, trim: true, required: true },
+  name: String,
+  email: { type: String, required: true },
+  password: { type: String, required: true },
   image: { type: String, trim: true }
 });
 
@@ -16,7 +16,7 @@ userSchema
 
 userSchema.pre('validate', function checkPassword(next) {
   if(!this._passwordConfirmation || this._passwordConfirmation !== this.password) {
-    this.invalidate('passwordConfirmation', 'Invalid combination');
+    this.invalidate('passwordConfirmation', 'Invalid combination Yo');
   }
   next();
 });

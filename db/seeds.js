@@ -17,12 +17,14 @@ User
     {
       name: 'Horace',
       email: 'horace@horace.com',
-      password: 'blah'
+      password: 'blah',
+      passwordConfirmation: 'blah'
     },
     {
       name: 'Helly',
       email: 'helly@helly.com',
-      password: 'bleh'
+      password: 'bleh',
+      passwordConfirmation: 'bleh'
     }
   ])
     .then(users => {
