@@ -1,0 +1,8 @@
+<h1>Users</h1>
+
+<ul>
+  <% users.forEach(user => { %>
+    <li><a href="/users/<%= user._id %>"><%= user.name %></a></li>
+    <li><%= user.email %></li>
+  <% }); %>
+</ul>
