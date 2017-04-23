@@ -87,7 +87,7 @@ function usersDelete(req, res) {
     .findByIdAndRemove(req.params.id)
     .exec()
     .then(() => {
-      return res.redirect('parks');
+      return res.redirect('/users');
     })
     .catch(err => {
       return res.render('error', { error: err });

@@ -1,6 +1,8 @@
 <h1>Update User Details</h1>
 
-<form class="" action="/users" method="post">
+<form class="" action="/users/<%= user._id %>" method="post">
+  <input type="hidden" name="_method" value="PUT">
+
   <label for="name">Name</label>
   <input type="text" id="name" name="name" value="<%= user.name %>">
 
@@ -16,5 +18,5 @@
   <label for="image">Profile picture, enter img URL here</label>
   <input type="text" id="image" name="image" value="<%= user.image %>">
 
-  <input type="submit" name="" value="Register">
+  <input type="submit" name="" value="Update">
 </form>
