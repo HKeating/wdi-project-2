@@ -1,6 +1,6 @@
 const mongoose    = require('mongoose');
 mongoose.Promise  = require('bluebird');
-// const env = require('../config/env');
+const env = require('../config/env');
 
 const User        = require('../models/user');
 

@@ -4,13 +4,12 @@ const morgan          = require('morgan');
 const bodyParser      = require('body-parser');
 const mongoose        = require('mongoose');
 mongoose.promise      = require('bluebird');
-const session         = require('express-session');
 const methodOverride  = require('method-override');
 const env             = require('./config/env');
 const router          = require('./config/routes');
 const User            = require('./models/user');
-
-
+const session         = require('express-session');
+const flash           = require('express-flash');
 const app             = express();
 
 mongoose.connect(env.db);
@@ -33,11 +32,12 @@ app.use(methodOverride((req) => {
 }));
 
 app.use(session({
-  secret: process.env.SESSION_SECRET || 'shh it\'s a secret',
+  secret: process.env.SESSION_SECRET || 'something secret',
   resave: false,
   saveUninitialized: false
 }));
 
+app.use(flash());
 
 app.use((req, res, next) => {
   if (!req.session.userId) return next();
@@ -48,7 +48,7 @@ app.use((req, res, next) => {
     .then(user => {
       if (!user) {
         return req.session.regenerate(() => {
-          // req.flash('danger', 'You must be logged in to view this...');
+          req.flash('danger', 'You must be logged in to view this...');
           res.redirect('/login');
         });
       }
