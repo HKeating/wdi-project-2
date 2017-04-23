@@ -4,8 +4,8 @@ const env = require('../config/env');
 
 const User        = require('../models/user');
 
-const databaseURL = 'mongodb://localhost/wdi-project-2';
-mongoose.connect(databaseURL, () => {
+// const databaseURL = 'mongodb://localhost/wdi-project-2';
+mongoose.connect(env.db, () => {
   console.log('Connected');
 });
 
