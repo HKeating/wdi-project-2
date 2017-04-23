@@ -3,3 +3,7 @@
 <h3><%= user.email %></h3>
 
 <a href="/users/<%= user._id %>/edit">Edit details</a>
+<form method="post" action="/users/<%= user.id %>">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete User">
+</form>

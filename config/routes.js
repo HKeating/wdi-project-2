@@ -12,8 +12,11 @@ router.route('/users')
 router.route('/users/new')
   .get(users.new);
 router.route('/users/:id')
-  .get(users.show);
+  .get(users.show)
+  .put(users.update)
+  .delete(users.delete);
 router.route('/users/:id/edit')
   .get(users.edit);
+
 
 module.exports = router;
