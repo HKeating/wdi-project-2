@@ -16,9 +16,13 @@
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/users">Users</a></li>
-        <li><a href="/users/new">Register</a></li>
-
+        <% if (locals.isLoggedIn) { %>
+          <li><a href="/users">Users</a></li>
+          <li><a href="/logout">Log Out</a></li>
+        <% } else { %>
+          <li><a href="/users/new">Register</a></li>
+          <li><a href="/login">Log In</a></li>
+        <% } %>
       </ul>
     </nav>
   </header>
