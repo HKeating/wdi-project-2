@@ -2,6 +2,7 @@ const express         = require('express');
 const expressLayouts  = require('express-ejs-layouts');
 const bodyParser      = require('body-parser');
 const mongoose        = require('mongoose');
+mongoose.promise      = require('bluebird');
 const methodOverride  = require('method-override');
 const env             = require('./config/env');
 const router          = require('./config/routes');
@@ -22,6 +23,7 @@ app.use(methodOverride((req) => {
     return method;
   }
 }));
+
 
 app.use(router);
 
