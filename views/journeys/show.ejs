@@ -4,7 +4,13 @@
 
 <ul>
   <% closest.forEach(result => { %>
-    <li><%= result.podcast %></a></li>
-    <li><%= result.title %></li>
+    <li><h2><%= result.podcast %></h2></li>
+    <li><h3><%= result.title %></h3></li>
+    <li>
+      <audio controls>
+        <source src="<%= result.link %>" type="audio/mpeg">
+      </audio>
+    </li>
+
   <% }); %>
 </ul>
