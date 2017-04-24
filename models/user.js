@@ -16,7 +16,7 @@ userSchema
 
 userSchema.pre('validate', function checkPassword(next) {
   if(!this._passwordConfirmation || this._passwordConfirmation !== this.password) {
-    this.invalidate('passwordConfirmation', 'Invalid combination Yo');
+    this.invalidate('passwordConfirmation', 'Invalid combination');
   }
   next();
 });
