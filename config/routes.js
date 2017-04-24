@@ -1,10 +1,12 @@
-const express = require('express');
-const router  = express.Router();
+const express                     = require('express');
+const router                      = express.Router();
 
 // Controllers
-const registrationsController = require('../controllers/registrations');
-const sessionsController = require('../controllers/sessions');
-const usersController = require('../controllers/users');
+const registrationsController     = require('../controllers/registrations');
+const sessionsController          = require('../controllers/sessions');
+const usersController             = require('../controllers/users');
+const journeysController          = require('../controllers/journeys');
+// const test                         = require('../lib/test');
 
 router.get('/', (req, res) => res.render('statics/home'));
 
@@ -27,6 +29,9 @@ router.route('/login')
   .post(sessionsController.create);
 router.route('/logout')
   .get(sessionsController.delete);
+router.route('/journeys')
+  .get(journeysController.new);
+  // .post(test.test);
 
 
 module.exports = router;

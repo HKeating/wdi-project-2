@@ -1,4 +1,5 @@
 console.log('hello world');
+// const lib = require('../lib/test');
 
 
 // $
@@ -10,10 +11,11 @@ console.log('hello world');
 //     console.log(err);
 //   });
 
+// $('#podcastSearch').click(lib.searchPodcasts);
 
 
-$
-  .get('https://api.tfl.gov.uk/journey/journeyresults/51.546,-0.103/to/51.496,-0.142')
-  .done(data => {
-    console.log(data.journeys[0].duration);
-  });
+// $
+//   .get('https://api.tfl.gov.uk/journey/journeyresults/51.546,-0.103/to/51.496,-0.142')
+//   .done(data => {
+//     console.log(data.journeys[0].duration);
+//   });
