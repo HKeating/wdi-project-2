@@ -1,6 +1,7 @@
 const User = require('../models/user');
 
 function sessionsNew(req, res) {
+  console.log('You can log in on this page');
   res.render('sessions/new');
 }
 

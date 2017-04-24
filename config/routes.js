@@ -6,7 +6,7 @@ const registrationsController     = require('../controllers/registrations');
 const sessionsController          = require('../controllers/sessions');
 const usersController             = require('../controllers/users');
 const journeysController          = require('../controllers/journeys');
-// const test                         = require('../lib/test');
+const test                         = require('../lib/test');
 
 router.get('/', (req, res) => res.render('statics/home'));
 
@@ -30,8 +30,8 @@ router.route('/login')
 router.route('/logout')
   .get(sessionsController.delete);
 router.route('/journeys')
-  .get(journeysController.new);
-  // .post(test.test);
+  .get(journeysController.new)
+  .post(test.search);
 
 
 module.exports = router;

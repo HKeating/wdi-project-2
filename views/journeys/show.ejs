@@ -1,3 +1,10 @@
 <h1>Podcast results</h1>
 
-<p></p>
+<p><%= closest %></p>
+
+<ul>
+  <% closest.forEach(result => { %>
+    <li><%= result.podcast %></a></li>
+    <li><%= result.title %></li>
+  <% }); %>
+</ul>
