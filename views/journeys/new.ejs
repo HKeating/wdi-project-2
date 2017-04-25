@@ -6,6 +6,9 @@
   <label for="journey">Journey<label>
   <select id="journeySelector" class="" name="journey">
     <option value="" disabled selected>Choose a journey</option>
+    <% user.journeys.forEach(journey => { %>
+      <option value="<%= journey._id %>"><%= journey.name %></option>
+    <% }); %>
   </select>
 
 
@@ -16,7 +19,7 @@
 
 <h3>Pod a journey</h3>
 <form id="podcastForm" class="" action="/search" method="post">
-
+  <span id="testSpan"></span>
   <%# <input type="text" id="topic" name="topic" value="">%>
 
   <label for="origin">Start Point</label>
