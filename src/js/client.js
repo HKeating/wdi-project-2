@@ -18,9 +18,12 @@ const subtopics = {
   'Technology': ['Gadgets', 'Podcasting', 'Software How-To', 'Tech News']
 };
 
+
+
 function init() {
   selectTopic();
   shadowSearch();
+  searchAllowed();
 }
 
 function selectTopic() {
@@ -39,21 +42,27 @@ function selectTopic() {
       });
     }
   });
-  //
-  // $(subtopicSelector).change(() => {
-  //
-  // });
+}
+
+function searchAllowed() {
+  const $origin = $('#origin');
+  const $destination = $('#destination');
+  const topicSelector = $('#topicSelector');
+  topicSelector.change(() => {
+    // console.log($origin.val());
+    if ($origin.val() && $destination.val()) $('.searchPods').prop('disabled', false);
+  });
 }
 
 function shadowSearch() {
   const $origin = $('#origin');
   const $destination = $('#destination');
   $origin.blur(() => {
+    // console.log($origin.val());
     $('#shadowOrigin').val($origin.val());
   });
   $destination.blur(() => {
     $('#shadowDestination').val($destination.val());
   });
-
 
 }
