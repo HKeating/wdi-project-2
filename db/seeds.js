@@ -1,8 +1,9 @@
 const mongoose    = require('mongoose');
 mongoose.Promise  = require('bluebird');
-const env = require('../config/env');
+const env         = require('../config/env');
 
 const User        = require('../models/user');
+// const Journey     = require('../models/journey');
 
 // const databaseURL = 'mongodb://localhost/wdi-project-2';
 mongoose.connect(env.db, () => {
@@ -18,7 +19,16 @@ User
       name: 'Horace',
       email: 'horace@horace.com',
       password: 'blah',
-      passwordConfirmation: 'blah'
+      passwordConfirmation: 'blah',
+      journeys: [{
+        name: 'testing',
+        origin: 'home',
+        destination: 'work'
+      }, {
+        name: 'testing2',
+        origin: 'home2',
+        destination: 'work2'
+      }]
     },
     {
       name: 'Helly',

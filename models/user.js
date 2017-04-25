@@ -1,11 +1,14 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const journeySchema = require('../models/journey');
+const Journey = mongoose.model('Journey');
 
 const userSchema = new mongoose.Schema({
   name: String,
   email: { type: String, required: true },
   password: { type: String, required: true },
-  image: { type: String, trim: true }
+  image: { type: String, trim: true },
+  journeys: [Journey.schema]
 });
 
 userSchema
@@ -15,9 +18,7 @@ userSchema
   });
 
 userSchema.pre('validate', function checkPassword(next) {
-  if(!this._passwordConfirmation || this._passwordConfirmation !== this.password) {
-    this.invalidate('passwordConfirmation', 'Invalid combination');
-  }
+  if (this.isModified('password') && (this._passwordConfirmation !== this.password)) this.invalidate('passwordConfirmation', 'Invalid combination');
   next();
 });
 

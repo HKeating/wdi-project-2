@@ -20,6 +20,7 @@ const subtopics = {
 
 function init() {
   selectTopic();
+  shadowSearch();
 }
 
 function selectTopic() {
@@ -38,8 +39,21 @@ function selectTopic() {
       });
     }
   });
-  // 
+  //
   // $(subtopicSelector).change(() => {
   //
   // });
+}
+
+function shadowSearch() {
+  const $origin = $('#origin');
+  const $destination = $('#destination');
+  $origin.blur(() => {
+    $('#shadowOrigin').val($origin.val());
+  });
+  $destination.blur(() => {
+    $('#shadowDestination').val($destination.val());
+  });
+
+
 }

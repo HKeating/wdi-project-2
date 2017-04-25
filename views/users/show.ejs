@@ -2,7 +2,20 @@
 
 <h3><%= user.email %></h3>
 
+<h3>Saved Journeys</h3>
+<ul>
+  <% user.journeys.forEach(journey => { %>
+    <li><h4><%= journey.name %></h4></li>
+    <li>Start: <%= journey.origin %></li>
+    <li>Destination: <%= journey.destination %></li>
+  <% }); %>
+</ul>
+
+
+
 <a href="/users/<%= user._id %>/edit">Edit details</a>
+
+
 <form method="post" action="/users/<%= user.id %>">
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete User">
