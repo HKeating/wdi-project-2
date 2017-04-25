@@ -2,20 +2,16 @@ console.log('hello world');
 // const lib = require('../lib/test');
 
 
-// $
-//   .get('https://itunes.apple.com/search?term=football&media=podcast&country=gb')
-//   .done(data => {
-//     console.log(data);
-//   })
-//   .fail(err => {
-//     console.log(err);
-//   });
+$(init);
 
-// $('#podcastSearch').click(lib.searchPodcasts);
+const topics = ['Arts', 'Business', 'Comedy', 'Education', 'Games &amp; Hobbies','Government &amp; Organisations', 'Health', 'Kids &amp; Family', 'Music', 'News &amp; Politics', 'Religion &amp; Spirituality', 'Science &amp; Medicine', 'Society &amp; Culture', 'Sports &amp; Hobbies', 'Technology', 'TV &amp; Film'];
 
+function init() {
+  topicSelector();
+}
 
-// $
-//   .get('https://api.tfl.gov.uk/journey/journeyresults/51.546,-0.103/to/51.496,-0.142')
-//   .done(data => {
-//     console.log(data.journeys[0].duration);
-//   });
+function topicSelector() {
+  topics.forEach(topic => {
+    $(`<option value="${topic}">${topic}</option>`).appendTo('#podcastSelector');
+  });
+}
