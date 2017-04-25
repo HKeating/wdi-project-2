@@ -24,7 +24,7 @@ function init() {
   addTopics();
   shadowSearch();
   searchAllowed();
-  useSavedJourney();
+  // useSavedJourney();
 }
 
 function addTopics() {
@@ -45,19 +45,20 @@ function addTopics() {
   });
 }
 
-function useSavedJourney() {
-  const $journeySelector = $('#journeySelector');
-  const $origin = $('#origin');
-  const $destination = $('#destination');
-  $journeySelector.change(() => {
-    console.log($('#journeySelector').val());
-    // trying to find the relevant DB entry through its ID... probably an obvious solution
-    $origin.val('<%= user.journeys[0].origin %>');
-    $destination.val('<%= user.journeys[0].destination %>');
-    // $origin.text('<%= user.journeys[0] %>');
-    // $destination.text('<%= user.journeys[0] %>');
-  });
-}
+// function useSavedJourney() {
+//   const $journeySelector = $('#journeySelector');
+//   const $origin = $('#origin');
+//   const $destination = $('#destination');
+//   $journeySelector.change(() => {
+//     console.log($('#journeySelector').val());
+//     // trying to find the relevant DB entry through its ID... probably an obvious solution
+//     // create hidden fields for origin and duration of each journey and find value of that?
+//     $origin.val('<%= user.journeys[0].origin %>');
+//     $destination.val('<%= user.journeys[0].destination %>');
+//     // $origin.text('<%= user.journeys[0] %>');
+//     // $destination.text('<%= user.journeys[0] %>');
+//   });
+// }
 
 function searchAllowed() {
   const $origin = $('#origin');
