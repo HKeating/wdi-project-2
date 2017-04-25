@@ -15,7 +15,8 @@ const subtopics = {
   'Health': ['Alternative Health', 'Fitness &amp; Nutrition', 'Self-Help', 'Sexuality'],
   'Science & Medicine': ['Medicine', 'Natural Sciences', 'Social Sciences'], 'Society & Culture': ['History', 'Personal Journals', 'Philosophy', 'Places &amp; Travel'],
   'Sports & Hobbies': ['Amateur', 'University &amp; Secondary School', 'Outdoor', 'Professional'],
-  'Technology': ['Gadgets', 'Podcasting', 'Software How-To', 'Tech News']};
+  'Technology': ['Gadgets', 'Podcasting', 'Software How-To', 'Tech News']
+};
 
 function init() {
   selectTopic();
@@ -31,9 +32,14 @@ function selectTopic() {
   $(topicSelector).change(() => {
     $(subtopicSelector).empty();
     $(`<option value="" disabled selected>Choose a subtopic</option>`).appendTo(subtopicSelector);
-    subtopics[`${$(topicSelector).val()}`].forEach(subtopic => {
-      $(`<option value="${subtopic}">${subtopic}</option>`).appendTo(subtopicSelector);
-    });
-
+    if (subtopics[`${$(topicSelector).val()}`]) {
+      subtopics[`${$(topicSelector).val()}`].forEach(subtopic => {
+        $(`<option value="${subtopic}">${subtopic}</option>`).appendTo(subtopicSelector);
+      });
+    }
   });
+  // 
+  // $(subtopicSelector).change(() => {
+  //
+  // });
 }
