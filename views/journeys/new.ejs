@@ -1,11 +1,14 @@
 <h1>New Journey</h1>
 
-<form class="" action="/journeys" method="post">
+<form id="podcastForm" class="" action="/journeys" method="post">
   <label for="topic">Topic</label>
   <%# <input type="text" id="topic" name="topic" value="">%>
 
-  <select id="podcastSelector" class="" name="topic">
+  <select id="topicSelector" class="" name="topic">
     <option value="" disabled selected>Choose a topic</option>
+  </select>
+  <select id="subtopicSelector" class="" name="topic">
+    <option value="" disabled selected>Choose a subtopic</option>
   </select>
 
   <%# <label for="email">Email</label>
