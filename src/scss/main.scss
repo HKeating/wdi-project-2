@@ -1,6 +1,13 @@
 body {
   font-family: sans-serif;
   background: #f1f1f1;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 header {
@@ -9,4 +16,8 @@ header {
 
 ul {
   list-style: none;
+}
+
+.podResults {
+  margin-bottom: 50px;
 }
