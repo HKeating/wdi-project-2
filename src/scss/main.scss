@@ -31,22 +31,21 @@ audio {
   background-size: auto;
   height: 200px;
   max-width: 200px;
+  position: relative;
 }
 
-.podcast {
-   width: 200px;
-   height: 200px;
-   position: relative;
-}
+
 .overlay {
    float: left;
    position: absolute;
    left: 0px;
    height: 200px;
    p {
+     background: rgba(0, 0, 0, 0.5);
      top: 0px;
    }
    audio {
+     position: absolute;
      bottom: 0px;
    }
    z-index: 1000;

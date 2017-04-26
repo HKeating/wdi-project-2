@@ -32,22 +32,26 @@ function init() {
   $('#description').trigger('autoresize');
   $('.collapsible').collapsible();
   $('.carousel').carousel();
+
 }
 
 
 function addTopics() {
   const topicSelector = '#topicSelector';
-  const subtopicSelector = '#subtopicSelector';
+  const subtopicSelector = '.subtopics';
   topics.forEach(topic => {
     $(`<option value="${topic}">${topic}</option>`).appendTo(topicSelector);
   });
 
   $(topicSelector).change(() => {
-    $(subtopicSelector).empty();
+    // $(subtopicSelector).empty();
     $(`<option value="" disabled selected>Choose a subtopic</option>`).appendTo(subtopicSelector);
     if (subtopics[`${$(topicSelector).val()}`]) {
+
       subtopics[`${$(topicSelector).val()}`].forEach(subtopic => {
-        $(`<option value="${subtopic}">${subtopic}</option>`).appendTo(subtopicSelector);
+        console.log('A log for each subtopic', subtopic);
+        console.log($(subtopicSelector));
+        $(`<option value="${subtopic}">${subtopic}</option>`).appendTo($(subtopicSelector));
       });
     }
   });
