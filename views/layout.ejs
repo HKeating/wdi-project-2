@@ -23,15 +23,23 @@
           <li><a href="/journeys">New Journey</a></li>
           <li><a href="/users">Users</a></li>
           <li><a href="/logout">Log Out</a></li>
+          <li><a href="/users/<%= locals.user.id %>"><%= locals.user.name %></a></li>
+          <li><img src="<%= locals.user.image %>"></li>
+
+
         <% } else { %>
           <li><a href="/register">Register</a></li>
           <li><a href="/login">Log In</a></li>
         <% } %>
       </ul>
+      <% if (locals.isLoggedIn) { %>
+
+        <% } %>
     </nav>
   </header>
   <main>
     <div class="container">
+      <%# <img src="https://scontent.flhr3-1.fna.fbcdn.net/v/t1.0-1/p320x320/10432989_10153638017387575_814915425786401046_n.jpg?oh=860c83119e2e5819011c4329a322d123&oe=598697FE" alt="">%>
 
     <% for (const type in messages) { %>
     <p class="alert alert-<%= type %>"><%= messages[type] %></p>
