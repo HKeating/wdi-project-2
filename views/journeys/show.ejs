@@ -16,17 +16,21 @@
 
 <div class="carousel podResults">
   <% closest.forEach(result => { %>
-    <div class="carousel-item">
+    <div class="carousel-item podcast">
+    <div class="overlay">
     <p><%= result.podcast.title %></p>
-    <img src="<%= result.podcast.image %>">
-
     <audio controls>
       <source src="<%= result.podcast.link %>" type="audio/mpeg">
     </audio>
     </div>
+    <img src="<%= result.podcast.image %>">
+
+    </div>
 
   <% }); %>
 </div>
+
+
 
 <p>Your journey from <%= originText %> to <%= destinationText %> will take <%= journeyTime %> minutes, enjoy your podcasts</p>
 

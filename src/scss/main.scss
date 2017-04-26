@@ -18,6 +18,30 @@ ul {
   list-style: none;
 }
 
+audio {
+  max-width: 200px;
+}
+
 .podResults {
   margin-bottom: 50px;
+}
+
+.podcast {
+  background-position: center;
+  background-size: auto;
+  height: 200px;
+  max-width: 200px;
+}
+
+.podcast {
+   width: 200px;
+   height: 200px;
+   position: relative;
+}
+.overlay {
+   float: left;
+   position: absolute;
+   left: 0px;
+   bottom: 0px;
+   z-index: 1000;
 }
