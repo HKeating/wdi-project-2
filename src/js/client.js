@@ -30,8 +30,10 @@ function init() {
   $('select').material_select();
   $('#description').val('');
   $('#description').trigger('autoresize');
-  // useSavedJourney();
+  $('.collapsible').collapsible();
+  $('.carousel').carousel();
 }
+
 
 function addTopics() {
   const topicSelector = '#topicSelector';

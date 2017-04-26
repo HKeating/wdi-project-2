@@ -1,24 +1,20 @@
-<h1>New Journey</h1>
 
 
+<h1>Pod a journey</h1>
 
-<h3>Pod a journey</h3>
-<form id="podcastForm" class="" action="/search" method="post">
-
-
+<form id="podcastForm" class="col" action="/search" method="post">
 
 <% if (locals.isLoggedIn) { %>
   <div class="input-field">
-    <select id="journeySelector" class="" name="journey">
-      <option value="" disabled selected>Choose a journey</option>
+  <select id="journeySelector" class="" name="journey">
+  <option value="" disabled selected>Choose a journey</option>
   <% user.journeys.forEach(journey => { %>
-      <option value="<%= journey._id %>"><%= journey.name %></option>
-  <% }); %>
+    <option value="<%= journey._id %>"><%= journey.name %></option>
+    <% }); %>
     </select>
     <label for="journey">Use a saved route<label>
-  </div>
+    </div>
     <% } %>
-
 
     <div class="input-field">
       <label for="origin">Start Point</label>
@@ -47,8 +43,10 @@
   </form>
   <form id="journeySave" class="" action="/journeys" method="post">
 
-    <label for="name">Journey Name</label>
-    <input type="text" name="name" value="">
+    <div class="input-field">
+      <label for="name">Journey Name</label>
+      <input type="text" name="name" value="">
+    </div>
 
     <input id="shadowOrigin" type="hidden" name="origin" value="">
     <input id="shadowDestination" type="hidden" name="destination" value="">
