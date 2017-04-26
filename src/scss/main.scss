@@ -42,6 +42,14 @@ audio {
    float: left;
    position: absolute;
    left: 0px;
-   bottom: 0px;
+   height: 200px;
+   p {
+     top: 0px;
+   }
+   audio {
+     bottom: 0px;
+   }
    z-index: 1000;
+   font-weight: bold;
+   color: #f5f5f5;
 }
