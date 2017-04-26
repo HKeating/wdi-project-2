@@ -34,9 +34,28 @@ function journeysCreate(req, res) {
 
 }
 
+// Need to fix up this function
+function journeysDelete(req, res) {
+  User
+    .findById(req.session.userId)
+    .then(user => {
+      Journey
+        .findByIdAndRemove(req.params.id)
+        .exec()
+        .then(() => {
+          return res.redirect('/users');
+        })
+        .catch(err => {
+          return res.render('error', { error: err });
+        });
+    });
+
+}
+
 
 
 module.exports = {
   new: journeysNew,
-  create: journeysCreate
+  create: journeysCreate,
+  delete: journeysDelete
 };

@@ -8,6 +8,10 @@
     <li><h4><%= journey.name %></h4></li>
     <li>Start: <%= journey.origin %></li>
     <li>Destination: <%= journey.destination %></li>
+    <li><form method="post" action="/journeys/<%= journey.id %>">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Delete Journey">
+    </form></li>
   <% }); %>
 </ul>
 

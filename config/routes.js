@@ -32,6 +32,8 @@ router.route('/logout')
 router.route('/journeys')
   .get(journeysController.new)
   .post(journeysController.create);
+router.route('/journeys/:id')
+  .delete(journeysController.delete);
 router.route('/search')
   .post(podcastsController.search);
 
