@@ -4,54 +4,54 @@
 
 <h3>Pod a journey</h3>
 <form id="podcastForm" class="" action="/search" method="post">
+
+
+
 <% if (locals.isLoggedIn) { %>
-  <label for="journey">Use a saved route<label>
-  <select id="journeySelector" class="" name="journey">
-    <option value="" disabled selected>Choose a journey</option>
-    <% user.journeys.forEach(journey => { %>
+  <div class="input-field">
+    <select id="journeySelector" class="" name="journey">
+      <option value="" disabled selected>Choose a journey</option>
+  <% user.journeys.forEach(journey => { %>
       <option value="<%= journey._id %>"><%= journey.name %></option>
-    <% }); %>
-  </select>
-<% } %>
-  <%# <input type="text" id="topic" name="topic" value="">%>
+  <% }); %>
+    </select>
+    <label for="journey">Use a saved route<label>
+  </div>
+    <% } %>
 
-  <label for="origin">Start Point</label>
-  <input class="searchField" type="text" id="origin" name="origin" value="">
 
-  <label for="destination">Destination</label>
-  <input class="searchField" type="text" id="destination" name="destination" value="">
+    <div class="input-field">
+      <label for="origin">Start Point</label>
+      <input class="searchField" type="text" id="origin" name="origin" value="">
+    </div>
+    <div class="input-field">
+      <label for="destination">Destination</label>
+      <input class="searchField" type="text" id="destination" name="destination" value="">
+    </div>
+    <div class="input-field">
+      <select id="topicSelector" class="" name="topic">
+        <option value="" disabled selected>Choose a topic</option>
+      </select>
+      <label for="topic">Topic</label>
+    </div>
+    <div class="input-field">
+      <select id="subtopicSelector" class="" name="topic">
+        <option value="" disabled selected>Choose a subtopic</option>
+      </select>
+    </div>
 
-  <label for="topic">Topic</label>
-  <select id="topicSelector" class="" name="topic">
-    <option value="" disabled selected>Choose a topic</option>
-  </select>
-  <select id="subtopicSelector" class="" name="topic">
-    <option value="" disabled selected>Choose a subtopic</option>
-  </select>
 
-  <%# <label for="email">Email</label>
-  <input type="text" id="email" name="email" value="">
+    <div class="input-field">
+      <input class="waves-effect btn searchPods" type="submit" name="" value="Search Podcasts">
+    </div>
+  </form>
+  <form id="journeySave" class="" action="/journeys" method="post">
 
-  <label for="password">Password</label>
-  <input type="password" id="password" name="password" value="">
+    <label for="name">Journey Name</label>
+    <input type="text" name="name" value="">
 
-  <label for="passwordConfirmation">Confirm Password</label>
-  <input type="text" id="passwordConfirmation" name="passwordConfirmation" value="">
+    <input id="shadowOrigin" type="hidden" name="origin" value="">
+    <input id="shadowDestination" type="hidden" name="destination" value="">
 
-  <label for="image">Profile picture, enter img URL here</label>
-  <input type="text" id="image" name="image" value="">%>
-
-  <input class="searchPods" type="submit" name="" value="Search Podcasts">
-</form>
-<form id="journeySave" class="" action="/journeys" method="post">
-
-  <label for="name">Journey Name</label>
-  <input type="text" name="name" value="">
-
-  <input id="shadowOrigin" type="hidden" name="origin" value="">
-  <input id="shadowDestination" type="hidden" name="destination" value="">
-
-  <input type="submit" name="" value="Save Journey">
-</form>
-
-<%# <button id="podcastSearch" type="button" name="button">Search Podcasts</button>%>
+    <input class="waves-effect btn" type="submit" name="" value="Save Journey">
+  </form>

@@ -4,6 +4,8 @@ console.log('hello world');
 
 $(init);
 
+
+
 const topics = ['Arts', 'Business', 'Comedy', 'Education', 'Football', 'Games &amp; Hobbies','Government &amp; Organisations', 'Health', 'Kids &amp; Family', 'Music', 'News &amp; Politics', 'Religion &amp; Spirituality', 'Science &amp; Medicine', 'Society &amp; Culture', 'Sports &amp; Hobbies', 'Technology', 'TV &amp; Film'];
 
 const subtopics = {
@@ -21,9 +23,13 @@ const subtopics = {
 
 
 function init() {
+
   addTopics();
   shadowSearch();
   searchAllowed();
+  $('select').material_select();
+  $('#description').val('');
+  $('#description').trigger('autoresize');
   // useSavedJourney();
 }
 
