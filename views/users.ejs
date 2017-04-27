@@ -1,8 +1,34 @@
-<h1>Users</h1>
 
-<ul>
-  <% users.forEach(user => { %>
-    <li><a href="/users/<%= user._id %>"><%= user.name %></a></li>
-    <li><%= user.email %></li>
-  <% }); %>
-</ul>
+
+
+
+<div class="row">
+  <div class="col s6">
+    <div class="homepageImg">
+      <img id="homepageImg" src="images/podMeLogo.png">
+    </div>
+  </div>
+  <div class="col s6">
+    <h3>User Index</h3>
+  </div>
+</div>
+  <div class="row">
+
+      <% users.forEach(user => { %>
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title"><a href="/users/<%= user._id %>"><%= user.name %></a></span>
+              <p>E-mail contact: <%= user.email %></p>
+            </div>
+            <div class="card-action">
+            </div>
+          </div>
+        </div>
+      <% }); %>
+
+
+
+
+
+  </div>

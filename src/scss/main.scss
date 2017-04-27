@@ -54,88 +54,33 @@ img {
   }
 }
 
-// #homepageImg {
-//   width: 200px;
-//   height: 200px;
-//   @media only screen and (max-width: 960px) {
-//   max-width: 150px;
-//   max-height: 150px;
-//   }
-//   @media only screen and (max-width: 640px) {
-//   max-width: 100px;
-//   max-height: 100px;
-//   }
-//   @media only screen and (max-width: 320px) {
-//   max-width: 50px;
-//   max-height: 50px;
-//   }
-// }
+.userImage {
+  text-align: center;
+}
 
 .podcast {
   img {
     margin-bottom: 50px;
   }
 }
-//     border-radius: 10px;
-//     max-width: 200px;
-//     max-height: 200px;
-//     margin-bottom: 10px;
-//     @media only screen and (max-width: 960px) {
-//     max-width: 150px;
-//     max-height: 150px;
-//     }
-//     @media only screen and (max-width: 640px) {
-//     max-width: 100px;
-//     max-height: 100px;
-//     }
-//     @media only screen and (max-width: 320px) {
-//     max-width: 50px;
-//     max-height: 50px;
-//     }
-//   }
-// }
+
 
 .podEpisodes {
   margin: 0 auto;
   text-align: center;
 }
 
-
-// audio {
-//   max-width: 200px;
-// }
-
-// .podResults {
-//   margin-bottom: 50px;
+// .journeyDiv {
+//   text-align:center;
+//   background: white;
+//   border-radius: 10px;
+//   float: left;
 // }
 //
-// .podcast {
-//   background-position: center;
-//   background-size: auto;
-//   height: 200px;
-//   width: 200px;
-//   position: relative;
-//   img {
-//     width: 200px;
-//     height: 200px;
-//   }
+// .journeyDetails {
+//   padding: 10px;
 // }
 //
-//
-// .overlay {
-//   //  float: left;
-//   //  position: absolute;
-//    left: 0px;
-//    height: 200px;
-//   //  p {
-//   //    background: rgba(0, 0, 0, 0.5);
-//   //    top: 0px;
-//   //  }
-//   //  audio {
-//   //    position: absolute;
-//   //    bottom: 0px;
-//   //  }
-//    z-index: 1000;
-//    font-weight: bold;
-//    color: #f5f5f5;
-// }
+.journeyName {
+  font-weight: 600;
+}
