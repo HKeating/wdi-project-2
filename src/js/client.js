@@ -27,6 +27,7 @@ function init() {
   addTopics();
   shadowSearch();
   searchAllowed();
+  loadingBar();
   $('select').material_select();
   $('#description').val('');
   $('#description').trigger('autoresize');
@@ -48,6 +49,13 @@ function init() {
     focusOnSelect: true
   });
 
+}
+
+function loadingBar() {
+  const searchPods = $('.searchPods');
+  searchPods.click(() => {
+    $('#loadingBar').toggleClass('indeterminate');
+  });
 }
 
 function addTopics() {
