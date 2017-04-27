@@ -1,29 +1,16 @@
 <h1>Podcast results</h1>
-<!--
-<ul>
-  <% closest.forEach(result => { %>
-    <li><h3><%= result.podcast.podcast %></h3></li>
-    <li><h4><%= result.podcast.title %></h4></li>
-    <li>
-      <audio controls>
-        <source src="<%= result.podcast.link %>" type="audio/mpeg">
-      </audio>
-    </li>
 
-  <% }); %>
-</ul>
--->
 
 <div class="carousel podResults">
-  <% closest.forEach(result => { %>
+  <% results.forEach(result => { %>
     <div class="carousel-item podcast">
     <div class="overlay">
-    <p><%= result.podcast.title %></p>
+    <p><%= result.title %></p>
     <audio controls>
-      <source src="<%= result.podcast.link %>" type="audio/mpeg">
+      <source src="<%= result.link %>" type="audio/mpeg">
     </audio>
     </div>
-    <img src="<%= result.podcast.image %>">
+    <img src="<%= result.image %>">
 
     </div>
 
