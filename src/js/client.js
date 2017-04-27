@@ -28,10 +28,12 @@ function init() {
   shadowSearch();
   searchAllowed();
   loadingBar();
+  toast();
   $('select').material_select();
   $('#description').val('');
   $('#description').trigger('autoresize');
   $('.collapsible').collapsible();
+  $('.tooltipped').tooltip({delay: 50, html: true});
   // $('.carousel').carousel();
   $('.slider-for').slick({
     slidesToShow: 1,
@@ -49,6 +51,13 @@ function init() {
     focusOnSelect: true
   });
 
+}
+
+function toast() {
+  const $toastContent = $('.alert').text();
+  if($('.alert').text()) {
+    Materialize.toast($toastContent, 4000);
+  }
 }
 
 function loadingBar() {

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" href="/css/main.css">
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -31,7 +32,7 @@
 
 
         <% } else { %>
-        
+
         <% } %>
       </ul>
     </nav>
@@ -41,7 +42,9 @@
       <%# <img src="https://scontent.flhr3-1.fna.fbcdn.net/v/t1.0-1/p320x320/10432989_10153638017387575_814915425786401046_n.jpg?oh=860c83119e2e5819011c4329a322d123&oe=598697FE" alt="">%>
 
     <% for (const type in messages) { %>
-    <p class="alert alert-<%= type %>"><%= messages[type] %></p>
+
+              <p class="alert alert-<%= type %>"><%= messages[type] %></p>
+
   <% } %>
 
     <%- body %>

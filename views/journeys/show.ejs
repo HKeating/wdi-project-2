@@ -1,6 +1,17 @@
-<div class="homepageImg">
-  <img id="homepageImg" src="images/podMeLogo.png">
+
+<div class="row">
+  <div class="col s4">
+    <a class="btn tooltipped" data-position="bottom" data-delay="50" data-tooltip="Origin: <%= originText %> <br> Destination: <%= destinationText %> <br> Duration: <%= journeyTime %> minutes">Journey</a>
+  </div>
+  <div class="col s4 homepageImg">
+    <img id="homepageImg" src="images/podMeLogo.png">
+  </div>
+  <div class="col s4">
+
+  </div>
+
 </div>
+
 
 <div class="slider-nav podResults">
   <% results.forEach(result => { %>

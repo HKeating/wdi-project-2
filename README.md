@@ -37,12 +37,16 @@ Error handling: the aforementioned variety in the podcast feeds required a lot o
 
 Additionally, I was happy with the styling - I was keen to keep the app very minimal on the front end and I think I achieved this, with a simple views structure and the ability to register, log in and search all on the same page.
 
-# Packages used
+# Packages and Dependencies used
 
 - jQuery
 - Express
 - Node
 - Mongo
 - mongoose
+- bcrypt
 - Google Maps API
 - iTunes store search API
+- Materialize CSS framework
+- slick.js
+- etc etc etc
