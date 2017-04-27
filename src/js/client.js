@@ -35,24 +35,24 @@ function init() {
 
 }
 
-
 function addTopics() {
   const topicSelector = '#topicSelector';
-  const subtopicSelector = '.subtopics';
+  const subtopicSelector = '#subtopicSelector';
   topics.forEach(topic => {
     $(`<option value="${topic}">${topic}</option>`).appendTo(topicSelector);
   });
 
   $(topicSelector).change(() => {
-    $(subtopicSelector).empty();
-    $(`<option value="" disabled selected>Choose a subtopic</option>`).appendTo(subtopicSelector);
+    $(`${subtopicSelector} #subtopic`).remove();
     if (subtopics[`${$(topicSelector).val()}`]) {
       // for some reason this process is breaking the subtopic selector select option...
       subtopics[`${$(topicSelector).val()}`].forEach(subtopic => {
-        console.log('A log for each subtopic', subtopic);
-        console.log($(subtopicSelector));
-        $(`<option value="${subtopic}">${subtopic}</option>`).appendTo($(subtopicSelector));
+        // console.log('A log for each subtopic', subtopic);
+        // console.log($(subtopicSelector));
+        $(`<option id="subtopic" value="${subtopic}">${subtopic}</option>`).appendTo(subtopicSelector);
       });
+
+      $('#subtopicSelector').material_select();
     }
   });
 }

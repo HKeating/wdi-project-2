@@ -69,14 +69,17 @@
             <label for="journey">Use a saved route<label>
             </div>
             <% } %>
+            <div class="row">
 
-            <div class="input-field">
+
+            <div class="input-field col s6">
               <label for="origin">Start Point</label>
               <input class="searchField" type="text" id="origin" name="origin" value="">
             </div>
-            <div class="input-field">
+            <div class="input-field col s6">
               <label for="destination">Destination</label>
               <input class="searchField" type="text" id="destination" name="destination" value="">
+            </div>
             </div>
             <div class="input-field">
               <select id="topicSelector" class="" name="topic">
@@ -86,7 +89,7 @@
             </div>
             <div class="input-field">
               <select id="subtopicSelector" class="subtopics" name="topic">
-                <option id="subtopics2" value="" disabled selected>Choose a subtopic</option>
+                <option id="default" value="" disabled selected>Choose a subtopic</option>
               </select>
             </div>
 

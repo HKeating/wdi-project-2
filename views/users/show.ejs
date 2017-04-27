@@ -16,7 +16,7 @@
 </ul>
 
 
-
+<% if(locals.user._id === user._id) { %>
 <a href="/users/<%= user._id %>/edit">Edit details</a>
 
 
@@ -24,3 +24,5 @@
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete User">
 </form>
+
+<% } %>
