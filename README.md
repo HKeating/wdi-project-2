@@ -20,8 +20,29 @@ Top of my list of additions would be an embedded Google Map that could be used t
 
 Outside of the search functionality, I would like to refine the styling and develop the user account pages. Having a publicly viewable profile and ability to share/save specific podcasts (or even journey-podcast combinations) would be a first step towards this.
 
+# How it works - code explanation...
+
+
+
 # Challenges faced
 
 This project was tough, I spent a significant chunk of the week wrestling with the highly variable formats that different podcasts use for their RSS feeds and the countless 'undefined' responses that this led to.
 
+ - Initial findClosest function vs eventual sort function.
+ - Stages of search: early build which returned 10 closest duration episodes from combined array of all episodes.
+
 # Biggest wins
+
+Error handling: the aforementioned variety in the podcast feeds required a lot of error handling and use of try - catch when sourcing the data. Reaching a point where the search can deal with undefined and null results and still return the episodes that it does find was a huge win.
+
+Additionally, I was happy with the styling - I was keen to keep the app very minimal on the front end and I think I achieved this, with a simple views structure and the ability to register, log in and search all on the same page.
+
+# Packages used
+
+- jQuery
+- Express
+- Node
+- Mongo
+- mongoose
+- Google Maps API
+- iTunes store search API
