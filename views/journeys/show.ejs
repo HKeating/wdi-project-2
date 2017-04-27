@@ -1,5 +1,14 @@
 <h1>Podcast results</h1>
 
+<div class="slider-nav podResults">
+  <% results.forEach(result => { %>
+    <div class="podcast">
+    <img src="<%= result.image %>">
+    </div>
+
+  <% }); %>
+</div>
+
 
 <div class="slider-for">
 
@@ -26,14 +35,7 @@
 
 </div>
 
-<div class="slider-nav podResults">
-  <% results.forEach(result => { %>
-    <div class="podcast">
-    <img src="<%= result.image %>">
-    </div>
 
-  <% }); %>
-</div>
 
 
 

@@ -34,8 +34,22 @@ ul {
   img {
     max-width: 200px;
     max-height: 200px;
+    @media only screen and (max-width: 960px) {
+    max-width: 150px;
+    max-height: 150px;
+    }
+    @media only screen and (max-width: 640px) {
+    max-width: 100px;
+    max-height: 100px;
+    }
+    @media only screen and (max-width: 320px) {
+    max-width: 50px;
+    max-height: 50px;
+    }
   }
 }
+
+
 // audio {
 //   max-width: 200px;
 // }
