@@ -1,17 +1,35 @@
 <h1>Podcast results</h1>
 
 
-<div class="carousel podResults">
-  <% results.forEach(result => { %>
-    <div class="carousel-item podcast">
-    <div class="overlay">
-    <p><%= result.title %></p>
-    <audio controls>
-      <source src="<%= result.link %>" type="audio/mpeg">
-    </audio>
-    </div>
-    <img src="<%= result.image %>">
+<div class="slider-for">
 
+    <% results.forEach(result => { %>
+      <div>
+      <h4><%= result.title %></h4>
+      <% if (result.episodes) { %>
+        <% for (var i=0; i<10; i++) { %>
+          <% if(result.episodes[i]) { %>
+          <p><%= result.episodes[i].title %></p>
+          <audio controls>
+            <source src="<%= result.episodes[i].link %>" type="audio/mpeg">
+          </audio>
+          <% } %>
+        <% } %>
+      <% } %>
+
+
+
+
+
+    </div>
+  <% }); %>
+
+</div>
+
+<div class="slider-nav podResults">
+  <% results.forEach(result => { %>
+    <div class="podcast">
+    <img src="<%= result.image %>">
     </div>
 
   <% }); %>

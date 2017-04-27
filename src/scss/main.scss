@@ -29,37 +29,48 @@ ul {
   list-style: none;
 }
 
-audio {
-  max-width: 200px;
-}
-
-.podResults {
-  margin-bottom: 50px;
-}
 
 .podcast {
-  background-position: center;
-  background-size: auto;
-  height: 200px;
-  max-width: 200px;
-  position: relative;
+  img {
+    max-width: 200px;
+    max-height: 200px;
+  }
 }
+// audio {
+//   max-width: 200px;
+// }
 
-
-.overlay {
-   float: left;
-   position: absolute;
-   left: 0px;
-   height: 200px;
-   p {
-     background: rgba(0, 0, 0, 0.5);
-     top: 0px;
-   }
-   audio {
-     position: absolute;
-     bottom: 0px;
-   }
-   z-index: 1000;
-   font-weight: bold;
-   color: #f5f5f5;
-}
+// .podResults {
+//   margin-bottom: 50px;
+// }
+//
+// .podcast {
+//   background-position: center;
+//   background-size: auto;
+//   height: 200px;
+//   width: 200px;
+//   position: relative;
+//   img {
+//     width: 200px;
+//     height: 200px;
+//   }
+// }
+//
+//
+// .overlay {
+//   //  float: left;
+//   //  position: absolute;
+//    left: 0px;
+//    height: 200px;
+//   //  p {
+//   //    background: rgba(0, 0, 0, 0.5);
+//   //    top: 0px;
+//   //  }
+//   //  audio {
+//   //    position: absolute;
+//   //    bottom: 0px;
+//   //  }
+//    z-index: 1000;
+//    font-weight: bold;
+//    color: #f5f5f5;
+// }
