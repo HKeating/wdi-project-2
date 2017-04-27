@@ -18,6 +18,7 @@ header {
     border-radius: 20px;
 
   }
+  overflow: hidden;
   // p {
   //   top: 0px;
   //   right: 10px;
@@ -29,27 +30,70 @@ ul {
   list-style: none;
 }
 
+.homepageImg {
+  margin: 0 auto;
+  text-align: center;
+}
+
+img {
+  border-radius: 10px;
+  max-width: 200px;
+  max-height: 200px;
+  margin-bottom: 10px;
+  @media only screen and (max-width: 960px) {
+  max-width: 150px;
+  max-height: 150px;
+  }
+  @media only screen and (max-width: 640px) {
+  max-width: 100px;
+  max-height: 100px;
+  }
+  @media only screen and (max-width: 320px) {
+  max-width: 50px;
+  max-height: 50px;
+  }
+}
+
+// #homepageImg {
+//   width: 200px;
+//   height: 200px;
+//   @media only screen and (max-width: 960px) {
+//   max-width: 150px;
+//   max-height: 150px;
+//   }
+//   @media only screen and (max-width: 640px) {
+//   max-width: 100px;
+//   max-height: 100px;
+//   }
+//   @media only screen and (max-width: 320px) {
+//   max-width: 50px;
+//   max-height: 50px;
+//   }
+// }
 
 .podcast {
   img {
-    border-radius: 10px;
-    max-width: 200px;
-    max-height: 200px;
-    margin-bottom: 10px;
-    @media only screen and (max-width: 960px) {
-    max-width: 150px;
-    max-height: 150px;
-    }
-    @media only screen and (max-width: 640px) {
-    max-width: 100px;
-    max-height: 100px;
-    }
-    @media only screen and (max-width: 320px) {
-    max-width: 50px;
-    max-height: 50px;
-    }
+    margin-bottom: 50px;
   }
 }
+//     border-radius: 10px;
+//     max-width: 200px;
+//     max-height: 200px;
+//     margin-bottom: 10px;
+//     @media only screen and (max-width: 960px) {
+//     max-width: 150px;
+//     max-height: 150px;
+//     }
+//     @media only screen and (max-width: 640px) {
+//     max-width: 100px;
+//     max-height: 100px;
+//     }
+//     @media only screen and (max-width: 320px) {
+//     max-width: 50px;
+//     max-height: 50px;
+//     }
+//   }
+// }
 
 .podEpisodes {
   margin: 0 auto;

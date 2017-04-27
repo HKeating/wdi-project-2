@@ -36,20 +36,16 @@ function journeysCreate(req, res) {
 
 // Need to fix up this function
 function journeysDelete(req, res) {
+  console.log('USER');
   User
-    .findById(req.session.userId)
-    .then(user => {
-      Journey
-        .findByIdAndRemove(req.params.id)
-        .exec()
-        .then(() => {
-          return res.redirect('/users');
-        })
-        .catch(err => {
-          return res.render('error', { error: err });
-        });
-    });
-
+  .findByIdAndUpdate({ _id: res.locals.user._id }, { $pull: { 'journeys': { _id: req.params.id } } }, { new: true })
+  .exec()
+  .then(() => {
+    return res.redirect('/users');
+  })
+  .catch(err => {
+    return res.render('error', { error: err });
+  });
 }
 
 

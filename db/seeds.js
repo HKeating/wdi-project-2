@@ -20,14 +20,15 @@ User
       email: 'horace@horace.com',
       password: 'blah',
       passwordConfirmation: 'blah',
+      image: 'https://scontent.flhr3-1.fna.fbcdn.net/v/t1.0-1/p320x320/10432989_10153638017387575_814915425786401046_n.jpg?oh=860c83119e2e5819011c4329a322d123&oe=598697FE',
       journeys: [{
-        name: 'testing',
-        origin: 'home',
-        destination: 'work'
+        name: 'GA to home',
+        origin: 'General Assembly',
+        destination: '35 Highbury Park'
       }, {
-        name: 'testing2',
-        origin: 'home2',
-        destination: 'work2'
+        name: 'Home to GA',
+        origin: '35 Highbury Park',
+        destination: 'General Assembly'
       }]
     },
     {

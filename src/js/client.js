@@ -80,6 +80,8 @@ function searchAllowed() {
   });
 }
 
+
+
 function shadowSearch() {
   const $origin = $('#origin');
   const $destination = $('#destination');
