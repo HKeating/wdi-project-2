@@ -47,8 +47,6 @@ function addTopics() {
     if (subtopics[`${$(topicSelector).val()}`]) {
       // for some reason this process is breaking the subtopic selector select option...
       subtopics[`${$(topicSelector).val()}`].forEach(subtopic => {
-        // console.log('A log for each subtopic', subtopic);
-        // console.log($(subtopicSelector));
         $(`<option id="subtopic" value="${subtopic}">${subtopic}</option>`).appendTo(subtopicSelector);
       });
 
