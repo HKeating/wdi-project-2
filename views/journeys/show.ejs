@@ -3,7 +3,7 @@
 <div class="slider-nav podResults">
   <% results.forEach(result => { %>
     <div class="podcast">
-    <img src="<%= result.image %>">
+      <img class="z-depth-2" src="<%= (result.image || 'https://www.fillmurray.com/200/200.jpg') %>" default="https://www.fillmurray.com/200/200.jpg">
     </div>
 
   <% }); %>
@@ -13,21 +13,21 @@
 <div class="slider-for">
 
     <% results.forEach(result => { %>
-      <div>
+      <div class="container podEpisodes">
       <h4><%= result.title %></h4>
+
       <% if (result.episodes) { %>
         <% for (var i=0; i<10; i++) { %>
           <% if(result.episodes[i]) { %>
+            <div class="col sm12 m3"
           <p><%= result.episodes[i].title %></p>
           <audio controls>
             <source src="<%= result.episodes[i].link %>" type="audio/mpeg">
           </audio>
+          </div>
           <% } %>
         <% } %>
       <% } %>
-
-
-
 
 
     </div>

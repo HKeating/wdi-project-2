@@ -32,8 +32,10 @@ ul {
 
 .podcast {
   img {
+    border-radius: 10px;
     max-width: 200px;
     max-height: 200px;
+    margin-bottom: 10px;
     @media only screen and (max-width: 960px) {
     max-width: 150px;
     max-height: 150px;
@@ -47,6 +49,11 @@ ul {
     max-height: 50px;
     }
   }
+}
+
+.podEpisodes {
+  margin: 0 auto;
+  text-align: center;
 }
 
 
