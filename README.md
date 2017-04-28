@@ -39,6 +39,8 @@ This project was tough, I spent a significant chunk of the week wrestling with t
 
 Not only did this make it unclear which podcast you were listening to, it would also unfairly favour whichever podcast had a standard episode duration closest to that of your journey.
 
+Reworking the search function to return the top 'x' podcasts and the 'y' closest duration episodes from each of them was the key change in my plan that occurred during the project:
+
 The search function takes the input origin and destination from the podcast search form and enters these values into a Google Maps Journey API request with a parameter of 'transit' for public transport. From this result it finds and saves the duration of the quickest journey.
 
 Using request-promise the function then makes a request to the iTunes store search API using the selected topic/subtopic as a search term. This returns a JSON file that contains an object for each podcast channel. The function then finds the feedURL for each podcast and makes a request to that URL for the podcast's RSS feed. This is returned as XML, which is then parsed to JSON.
@@ -82,7 +84,9 @@ The snippet below shows the map function used to convert the 'items' section of 
 
 Error handling: the aforementioned variety in the podcast feeds required a lot of error handling and use of try - catch functions when sourcing the data. Reaching a point where the search can deal with undefined and null results and still return the episodes that it does find was a huge win.
 
-Additionally, I was happy with the styling - I was keen to keep the app minimalist, on the front end in order to make usage quick and easy and I think I achieved this, with a simple views structure and the ability to register, log in and search all on the same page.
+Additionally, I was happy with the styling - I wanted to keep the app minimal on the front end in order to make usage quick and easy and I think I achieved this, with a simple views structure and the ability to register, log in and search all on the same page.
+
+![balsamiq](src/images/BalsamiqCarousel.png)
 
 This project was also the first time I used Trello to manage my tasks and Balsamiq for wireframing. I found both tools very useful for keeping on top of what I wanted to achieve.
 
