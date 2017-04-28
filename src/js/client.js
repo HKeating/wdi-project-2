@@ -60,6 +60,7 @@ function toast() {
   }
 }
 
+
 function loadingBar() {
   const searchPods = $('.searchPods');
   searchPods.click(() => {

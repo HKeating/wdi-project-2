@@ -25,7 +25,7 @@ function journeysCreate(req, res) {
 
         });
       req.flash('info', `New journey saved`);
-      res.redirect('/journeys');
+      res.redirect('/');
     })
     .catch(err => {
       return res.render('error', { error: err });

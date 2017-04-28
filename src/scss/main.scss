@@ -63,18 +63,36 @@ img {
 }
 
 .podcast {
+  margin-top: 15px;
   img {
     margin-bottom: 50px;
   }
 }
 
 .podTitle {
-  font-weight: thin;
+  font-weight: 600;
+  @media only screen and (max-width: 960px) {
+
+  }
+  @media only screen and (max-width: 640px) {
+  font-size: 20px;
+  }
+  @media only screen and (max-width: 320px) {
+    font-size: 15px;
+  }
 }
 
 .podEpisodes {
   margin: 0 auto;
   text-align: center;
+  z-index: 1000;
+  overflow: visible;
+  margin: 20px;
+}
+
+.episodes {
+  // overflow: visible;
+  // margin: 20px;
 }
 
 audio {
@@ -108,3 +126,6 @@ audio {
 .journeyName {
   font-weight: 600;
 }
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
