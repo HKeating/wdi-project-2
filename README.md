@@ -84,6 +84,10 @@ Error handling: the aforementioned variety in the podcast feeds required a lot o
 
 Additionally, I was happy with the styling - I was keen to keep the app minimalist, on the front end in order to make usage quick and easy and I think I achieved this, with a simple views structure and the ability to register, log in and search all on the same page.
 
+This project was also the first time I used Trello to manage my tasks and Balsamiq for wireframing. I found both tools very useful for keeping on top of what I wanted to achieve.
+
+![trello](src/images/TrelloExample.png)
+
 ### Packages and Dependencies used, and additional credits
 
 - [jQuery](https://code.jquery.com/)
