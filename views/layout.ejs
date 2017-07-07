@@ -28,8 +28,9 @@
           <li><a href="/users">Users</a></li>
           <li><a href="/logout">Log Out</a></li>
           <li><a href="/users/<%= locals.user.id %>"><%= locals.user.name %></a></li>
+          <% if (locals.user.image) { %>
           <li><img src="<%= locals.user.image %>"></li>
-
+          <% } %>
 
         <% } else { %>
 

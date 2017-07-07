@@ -18,12 +18,14 @@ header {
     border-radius: 20px;
 
   }
-  overflow: hidden;
-  // p {
-  //   top: 0px;
-  //   right: 10px;
-  //   position: absolute;
+  // a:hover {
+  //   height: 100%;
+  //   overflow: hidden;
   // }
+  // overflow: hidden;
+  a {
+    height: 64px !important;
+  }
 }
 
 ul {
