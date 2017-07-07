@@ -18,11 +18,6 @@ header {
     border-radius: 20px;
 
   }
-  // a:hover {
-  //   height: 100%;
-  //   overflow: hidden;
-  // }
-  // overflow: hidden;
   a {
     height: 64px !important;
   }
@@ -92,10 +87,17 @@ img {
   margin: 20px;
 }
 
-.episodes {
-  // overflow: visible;
-  // margin: 20px;
+.card {
+  height: 160px;
 }
+.card-action {
+  height: 60px;
+}
+.card-content {
+  overflow: scroll;
+  height: 100px;
+}
+
 
 audio {
 
@@ -113,21 +115,9 @@ audio {
   }
 }
 
-
-// .journeyDiv {
-//   text-align:center;
-//   background: white;
-//   border-radius: 10px;
-//   float: left;
-// }
-//
-// .journeyDetails {
-//   padding: 10px;
-// }
-//
 .journeyName {
   font-weight: 600;
 }
 
 .grow { transition: all .2s ease-in-out; }
-.grow:hover { transform: scale(1.1); }
+.grow:hover { transform: scale(1.05); }

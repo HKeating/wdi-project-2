@@ -40,13 +40,12 @@
   </header>
   <main>
     <div class="container">
-      <%# <img src="https://scontent.flhr3-1.fna.fbcdn.net/v/t1.0-1/p320x320/10432989_10153638017387575_814915425786401046_n.jpg?oh=860c83119e2e5819011c4329a322d123&oe=598697FE" alt="">%>
 
     <% for (const type in messages) { %>
 
               <p class="alert alert-<%= type %>"><%= messages[type] %></p>
 
-  <% } %>
+    <% } %>
 
     <%- body %>
 
